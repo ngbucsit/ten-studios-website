@@ -10,25 +10,43 @@ import Layout from "../layouts/Layout.astro";
     </main>
 </Layout>
 
+<script>
+    window.onbeforeunload = () => window.scrollTo(0, 0);
+</script>
+
 <style>
     main {
+        display: flex;
+        flex-direction: column;
         margin: 0 auto;
-        width: 800px;
-        max-width: calc(100% - 2rem);
+        height: 80vh;
+        max-height: 100vh;
+        width: 100vw;
         color: black;
-        font-size: 20px;
         line-height: 1.6;
+        justify-content: center;
     }
     .hero {
-        height: 100vh;
+        flex: 1;
         display: flex;
-        flex-flow: column;
+        height: 100%;
+        justify-content: center;
     }
     .hero img {
-        flex: 1 0 0;
         -moz-user-select: none;
         -webkit-user-select: none;
         user-select: none;
         pointer-events: none;
+        animation: fadeInAnimation ease 3s;
+        animation-fill-mode: forwards;
+        width: 60%;
+    }
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 </style>
