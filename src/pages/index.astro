@@ -25,11 +25,13 @@ import Layout from "../layouts/Layout.astro";
         color: black;
         line-height: 1.6;
         justify-content: center;
+        align-items: center;
     }
     .hero {
         flex: 1;
         display: flex;
         height: 100%;
+        width: 60%;
         justify-content: center;
     }
     .hero img {
@@ -39,7 +41,6 @@ import Layout from "../layouts/Layout.astro";
         pointer-events: none;
         animation: fadeInAnimation ease 3s;
         animation-fill-mode: forwards;
-        width: 60%;
     }
     @keyframes fadeInAnimation {
         0% {
