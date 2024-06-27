@@ -7,6 +7,10 @@ import Layout from "../layouts/Layout.astro";
         <div class="hero">
             <img src="../../public/TS_Alternative Logo A_Black.svg" />
         </div>
+        <div class="button-group">
+            <button>SELF-PHOTO STUDIO RATES</button>
+            <button>CONCEPT STUDIO RATES</button>
+        </div>
     </main>
 </Layout>
 
@@ -18,21 +22,17 @@ import Layout from "../layouts/Layout.astro";
     main {
         display: flex;
         flex-direction: column;
-        margin: 0 auto;
-        height: 80vh;
-        max-height: 100vh;
         width: 100vw;
-        color: black;
-        line-height: 1.6;
         justify-content: center;
         align-items: center;
     }
     .hero {
-        flex: 1;
+        flex: 1 1 auto;
         display: flex;
-        height: 100%;
+        height: 100vh;
         width: 60%;
         justify-content: center;
+        align-items: center;
     }
     .hero img {
         -moz-user-select: none;
@@ -41,6 +41,24 @@ import Layout from "../layouts/Layout.astro";
         pointer-events: none;
         animation: fadeInAnimation ease 3s;
         animation-fill-mode: forwards;
+    }
+    .button-group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .button-group button {
+        padding: 1rem 2rem;
+        flex: 0 0 700px;
+        background-color: #000;
+        border: 0;
+        font-family: "Konstant Grotesk";
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 0.5rem;
+        text-align: center;
     }
     @keyframes fadeInAnimation {
         0% {
