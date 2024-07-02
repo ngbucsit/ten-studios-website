@@ -16,10 +16,6 @@ import Layout from "../layouts/Layout.astro";
     </main>
 </Layout>
 
-<script>
-    window.onbeforeunload = () => window.scrollTo(0, 0);
-</script>
-
 <style>
     main {
         display: flex;
@@ -45,39 +41,10 @@ import Layout from "../layouts/Layout.astro";
         -webkit-user-select: none;
         user-select: none;
         pointer-events: none;
-        animation: fadeInAnimation ease 3s;
-        animation-fill-mode: forwards;
-    }
-    .button-group {
-        flex: 1;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-around;
-        width: 100%;
-    }
-    .button-group button {
-        padding: 1rem 2rem;
-        flex: 0 0 700px;
-        background-color: #000;
-        border: 0;
-        font-family: "Konstant Grotesk";
-        font-weight: bold;
-        color: #fff;
-        letter-spacing: 0.5rem;
-        text-align: center;
     }
     @media (max-width: 600px) {
         .hero {
             padding: 5rem;
-        }
-    }
-    @keyframes fadeInAnimation {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
         }
     }
 </style>
